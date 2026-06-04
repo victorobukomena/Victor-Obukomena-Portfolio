@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git --yes)",
+      "Read(//c/Users/AIG/Desktop/**)",
+      "Bash(npx create-next-app@latest victor-portfolio --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git --yes)",
+      "Bash(cp -r \"C:\\\\Users\\\\AIG\\\\Desktop\\\\victor-portfolio/.\" \"C:\\\\Users\\\\AIG\\\\Desktop\\\\Victor Obukomena Portfolio/\")",
+      "Bash(rm -rf \"C:\\\\Users\\\\AIG\\\\Desktop\\\\victor-portfolio\")",
+      "Bash(npm install *)",
+      "Bash(echo \"Exit: $?\")",
+      "Bash(node -e \"const p = require\\('./package.json'\\); console.log\\('framer-motion:', p.dependencies['framer-motion'] || 'NOT FOUND'\\)\")",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(npm run *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/work/brand-and-stitch)",
+      "PowerShell(New-Item -ItemType Directory -Path \"C:\\\\Users\\\\AIG\\\\Desktop\\\\Victor Obukomena Portfolio\\\\public\\\\assets\\\\projects\\\\mcfabels-foods\" -Force)",
+      "Bash(Get-ChildItem \"C:\\\\Users\\\\AIG\\\\Desktop\\\\Victor Obukomena Portfolio\\\\public\\\\assets\\\\projects\\\\mcfabels-foods\")",
+      "Bash(Select-Object Name)",
+      "WebFetch(domain:www.abelidume.com)",
+      "Bash(node -e \"const {execSync} = require\\('child_process'\\); try { const sharp = require\\('sharp'\\); sharp\\('./public/assets/projects/merit-and-mark/2 copy.jpg'\\).metadata\\(\\).then\\(m => console.log\\(m.width + 'x' + m.height\\)\\); } catch\\(e\\) { console.log\\('sharp not available'\\); }\")"
+    ]
+  }
+}
