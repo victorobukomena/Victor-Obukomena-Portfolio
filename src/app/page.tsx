@@ -172,6 +172,26 @@ export default function HomePage() {
           </div>
         </motion.div>
       </section>
+
+      {/* ── Bottom CTA ───────────────────────────────────────────────── */}
+      <section className="px-6 md:px-12 py-24 max-w-7xl mx-auto border-t border-black/5 dark:border-white/5">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-2xl md:text-3xl lg:text-4xl font-normal text-gray-900 dark:text-white leading-snug"
+        >
+          Have a project in mind?{' '}
+          <Link
+            href="/contact"
+            className="text-[#D4A853] underline underline-offset-4 decoration-[#D4A853]/40 hover:decoration-[#D4A853] transition-all duration-300"
+          >
+            I&apos;d love to hear from you
+          </Link>
+          .
+        </motion.p>
+      </section>
     </>
   )
 }
