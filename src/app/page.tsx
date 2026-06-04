@@ -30,7 +30,7 @@ export default function HomePage() {
       <ProjectStrip />
 
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative flex flex-col justify-center px-6 md:px-12 pt-16 pb-12 max-w-7xl mx-auto">
+      <section className="relative flex flex-col justify-center px-6 md:px-12 pt-16 pb-12 max-w-[1440px] mx-auto">
         {/* Decorative slowly-rotating asterisk */}
         <div
           className="absolute top-36 right-6 md:right-16 text-[#D4A853] text-5xl opacity-20 pointer-events-none select-none"
@@ -87,7 +87,7 @@ export default function HomePage() {
       <Marquee />
 
       {/* ── Selected Work ────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 pt-12 pb-20 max-w-7xl mx-auto">
+      <section className="px-6 md:px-12 pt-12 pb-20 max-w-[1440px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -128,7 +128,7 @@ export default function HomePage() {
       </section>
 
       {/* ── About teaser ─────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 py-16 max-w-7xl mx-auto border-t border-black/5 dark:border-white/5">
+      <section className="px-6 md:px-12 py-16 max-w-[1440px] mx-auto border-t border-black/5 dark:border-white/5">
         <motion.blockquote
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -150,7 +150,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Clients strip ────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 py-16 max-w-7xl mx-auto border-t border-black/5 dark:border-white/5">
+      <section className="px-6 md:px-12 py-16 max-w-[1440px] mx-auto border-t border-black/5 dark:border-white/5">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -174,7 +174,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Bottom CTA ───────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 py-24 max-w-7xl mx-auto border-t border-black/5 dark:border-white/5">
+      <section className="px-6 md:px-12 py-24 max-w-[1440px] mx-auto border-t border-black/5 dark:border-white/5">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

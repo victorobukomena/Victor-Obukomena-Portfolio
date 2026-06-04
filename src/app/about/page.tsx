@@ -43,7 +43,7 @@ const bio = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-32 px-6 md:px-12 pb-24 max-w-6xl mx-auto">
+    <div className="pt-32 px-6 md:px-12 pb-24 max-w-[1440px] mx-auto">
       {/* Hero heading */}
       <motion.h1
         initial={{ opacity: 0, y: 32 }}

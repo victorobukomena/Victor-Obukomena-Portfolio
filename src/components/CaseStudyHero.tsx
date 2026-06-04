@@ -12,7 +12,7 @@ export default function CaseStudyHero({ project, index }: CaseStudyHeroProps) {
   const num = String(index + 1).padStart(2, '0')
 
   return (
-    <div className="pt-8 pb-12 px-6 md:px-12 max-w-6xl mx-auto">
+    <div className="pt-8 pb-12 px-6 md:px-12 max-w-[1440px] mx-auto">
       {/* Project number + year */}
       <motion.p
         initial={{ opacity: 0 }}

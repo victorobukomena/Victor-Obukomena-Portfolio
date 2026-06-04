@@ -6,7 +6,7 @@ import WorkListRow from '@/components/WorkListRow'
 
 export default function WorkPage() {
   return (
-    <div className="pt-32 px-6 md:px-12 pb-24 max-w-6xl mx-auto">
+    <div className="pt-32 px-6 md:px-12 pb-24 max-w-[1440px] mx-auto">
       {/* Header */}
       <div className="mb-16">
         <motion.p

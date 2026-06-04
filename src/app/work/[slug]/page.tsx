@@ -194,7 +194,7 @@ export default function CaseStudyPage() {
               dark:from-[#0A0A0F] dark:to-transparent" />
 
             {/* Back link — top-left overlay */}
-            <div className="absolute top-0 left-0 right-0 pt-28 px-6 md:px-12 max-w-6xl mx-auto">
+            <div className="absolute top-0 left-0 right-0 pt-28 px-6 md:px-12 max-w-[1440px] mx-auto">
               <Link
                 href="/work"
                 className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-[#D4A853] transition-colors drop-shadow"
@@ -207,7 +207,7 @@ export default function CaseStudyPage() {
         </>
       ) : (
         /* Back link for projects without a hero image */
-        <div className="pt-28 px-6 md:px-12 max-w-6xl mx-auto">
+        <div className="pt-28 px-6 md:px-12 max-w-[1440px] mx-auto">
           <Link
             href="/work"
             className="inline-flex items-center gap-2 text-sm text-gray-400 dark:text-white/40 hover:text-[#D4A853] transition-colors"
@@ -223,7 +223,7 @@ export default function CaseStudyPage() {
 
       {/* Image grid — early position (before narrative sections, e.g. Merit & Mark) */}
       {project.gridBeforeSections && (
-        <div className="px-6 md:px-12 max-w-6xl mx-auto mt-8">
+        <div className="px-6 md:px-12 max-w-[1440px] mx-auto mt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {gridNodes}
           </div>
@@ -232,7 +232,7 @@ export default function CaseStudyPage() {
 
       {/* Narrative sections (present on rich case studies like McFabels) */}
       {project.sections && project.sections.length > 0 && (
-        <div className="px-6 md:px-12 max-w-6xl mx-auto pb-4">
+        <div className="px-6 md:px-12 max-w-[1440px] mx-auto pb-4">
           <div className={project.gridBeforeSections ? 'pt-4' : 'border-t border-black/5 dark:border-white/5 pt-16'}>
             {project.sections.map((section, si) => (
               <motion.div
@@ -468,7 +468,7 @@ export default function CaseStudyPage() {
 
       {/* Image grid — default position (after narrative sections) */}
       {!project.gridBeforeSections && (
-        <div className="px-6 md:px-12 max-w-6xl mx-auto mt-16">
+        <div className="px-6 md:px-12 max-w-[1440px] mx-auto mt-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {gridNodes}
           </div>
@@ -476,7 +476,7 @@ export default function CaseStudyPage() {
       )}
 
       {/* Next project */}
-      <div className="px-6 md:px-12 max-w-6xl mx-auto pb-24">
+      <div className="px-6 md:px-12 max-w-[1440px] mx-auto pb-24">
         {nextProject && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}

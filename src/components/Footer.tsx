@@ -29,7 +29,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-black/5 dark:border-white/5 px-6 md:px-12 py-12 mt-20">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between gap-8">
           {/* Left: clock + email */}
           <div>
