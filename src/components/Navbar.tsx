@@ -29,11 +29,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between transition-all duration-300 ${
-          scrolled
-            ? 'bg-white/80 dark:bg-[#0A0A0F]/80 backdrop-blur-md border-b border-black/5 dark:border-white/5'
-            : ''
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between transition-all duration-300 bg-white/70 dark:bg-[#0A0A0F]/70 backdrop-blur-md border-b border-black/5 dark:border-white/5"
       >
         {/* Wordmark */}
         <Link

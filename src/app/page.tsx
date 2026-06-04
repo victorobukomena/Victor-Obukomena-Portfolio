@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Marquee from '@/components/Marquee'
+import ProjectStrip from '@/components/ProjectStrip'
 import WorkCard from '@/components/WorkCard'
 import { projects } from '@/data/projects'
 
@@ -20,22 +21,22 @@ const clients = [
 // Hero heading segments — gold highlights applied via className
 const heroSegments = [
   { text: "Hey there! I'm ", gold: false },
-  { text: 'Victor Obukomena,', gold: true },
-  { text: ' a cross-disciplinary creative specialising in ', gold: false },
-  { text: 'graphic design,', gold: true },
-  { text: ' ', gold: false },
-  { text: 'brand design,', gold: true },
-  { text: ' ', gold: false },
-  { text: 'motion,', gold: true },
+  { text: 'Victor Obukomena', gold: true },
+  { text: ' — a cross-disciplinary creative in ', gold: false },
+  { text: 'graphic design, brand identity, motion,', gold: true },
   { text: ' and ', gold: false },
   { text: 'digital communications.', gold: true },
+  { text: ' I blend creativity with strategy to build visuals that inform, engage, and drive action.', gold: false },
 ]
 
 export default function HomePage() {
   return (
     <>
+      {/* ── Project image strip — starts at y:0, bleeds under navbar ── */}
+      <ProjectStrip />
+
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 pt-28 pb-16 max-w-7xl mx-auto">
+      <section className="relative flex flex-col justify-center px-6 md:px-12 pt-16 pb-6 max-w-7xl mx-auto">
         {/* Decorative slowly-rotating asterisk */}
         <div
           className="absolute top-36 right-6 md:right-16 text-[#D4A853] text-5xl opacity-20 pointer-events-none select-none"
@@ -47,7 +48,7 @@ export default function HomePage() {
 
         <div className="max-w-5xl">
           {/* Main heading — word-by-word stagger */}
-          <h1 className="text-[clamp(1.75rem,5vw,4.5rem)] font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-white mb-8">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-normal leading-relaxed tracking-normal text-gray-900 dark:text-white mb-8">
             {heroSegments.map((seg, i) => (
               <motion.span
                 key={i}
@@ -65,24 +66,12 @@ export default function HomePage() {
             ))}
           </h1>
 
-          {/* Sub-paragraph in muted grey */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.75, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[#888] dark:text-[#999] text-base md:text-lg leading-relaxed max-w-2xl mb-12"
-          >
-            I help brands and teams turn ideas into clear, compelling visual communication,
-            designing work that informs, engages, and drives action by blending creativity
-            with strategy to deliver visuals with purpose, clarity, and impact.
-          </motion.p>
-
           {/* CTA buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.95, duration: 0.6 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap gap-4 mt-10"
           >
             <Link
               href="/work"
@@ -104,7 +93,7 @@ export default function HomePage() {
       <Marquee />
 
       {/* ── Selected Work ────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 py-20 max-w-7xl mx-auto">
+      <section className="px-6 md:px-12 pt-8 pb-20 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -17,7 +17,11 @@
       "Bash(Get-ChildItem \"C:\\\\Users\\\\AIG\\\\Desktop\\\\Victor Obukomena Portfolio\\\\public\\\\assets\\\\projects\\\\mcfabels-foods\")",
       "Bash(Select-Object Name)",
       "WebFetch(domain:www.abelidume.com)",
-      "Bash(node -e \"const {execSync} = require\\('child_process'\\); try { const sharp = require\\('sharp'\\); sharp\\('./public/assets/projects/merit-and-mark/2 copy.jpg'\\).metadata\\(\\).then\\(m => console.log\\(m.width + 'x' + m.height\\)\\); } catch\\(e\\) { console.log\\('sharp not available'\\); }\")"
+      "Bash(node -e \"const {execSync} = require\\('child_process'\\); try { const sharp = require\\('sharp'\\); sharp\\('./public/assets/projects/merit-and-mark/2 copy.jpg'\\).metadata\\(\\).then\\(m => console.log\\(m.width + 'x' + m.height\\)\\); } catch\\(e\\) { console.log\\('sharp not available'\\); }\")",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Fix JSX namespace type import for production build *)",
+      "Bash(git push *)",
+      "Bash(gh pr *)"
     ]
   }
 }
