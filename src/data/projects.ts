@@ -327,7 +327,7 @@ export const projects: Project[] = [
   {
     slug: 'video-projects',
     title: 'Video Projects',
-    thumbnail: 'https://img.youtube.com/vi/wj04KlM7-VQ/maxresdefault.jpg',
+    thumbnail: 'https://img.youtube.com/vi/KkQvHKKDSvI/maxresdefault.jpg',
     year: '2019–2025',
     tags: ['Video Production', 'Motion Design', 'Brand Film'],
     description:
