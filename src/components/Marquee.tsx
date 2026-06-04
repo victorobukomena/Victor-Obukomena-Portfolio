@@ -16,7 +16,7 @@ const items = [...SERVICES, ...SERVICES]
 export default function Marquee() {
   return (
     <div
-      className="border-y border-black/5 dark:border-white/5 overflow-hidden py-4 my-6 select-none"
+      className="border-y border-black/5 dark:border-white/5 overflow-hidden py-4 my-10 select-none"
       aria-hidden="true"
     >
       <div

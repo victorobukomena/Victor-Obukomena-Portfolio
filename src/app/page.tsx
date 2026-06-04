@@ -20,13 +20,7 @@ const clients = [
 
 // Hero heading segments — gold highlights applied via className
 const heroSegments = [
-  { text: "Hey there! I'm ", gold: false },
-  { text: 'Victor Obukomena', gold: true },
-  { text: ' — a cross-disciplinary creative in ', gold: false },
-  { text: 'graphic design, brand identity, motion,', gold: true },
-  { text: ' and ', gold: false },
-  { text: 'digital communications.', gold: true },
-  { text: ' I blend creativity with strategy to build visuals that inform, engage, and drive action.', gold: false },
+  { text: "Hey there! I'm Victor Obukomena, a cross-disciplinary creative in graphic design, brand identity, motion, and digital communications. I blend creativity with strategy to build visuals that inform, engage, and drive action.", gold: false },
 ]
 
 export default function HomePage() {
@@ -36,7 +30,7 @@ export default function HomePage() {
       <ProjectStrip />
 
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative flex flex-col justify-center px-6 md:px-12 pt-16 pb-6 max-w-7xl mx-auto">
+      <section className="relative flex flex-col justify-center px-6 md:px-12 pt-16 pb-12 max-w-7xl mx-auto">
         {/* Decorative slowly-rotating asterisk */}
         <div
           className="absolute top-36 right-6 md:right-16 text-[#D4A853] text-5xl opacity-20 pointer-events-none select-none"
@@ -48,7 +42,7 @@ export default function HomePage() {
 
         <div className="max-w-5xl">
           {/* Main heading — word-by-word stagger */}
-          <h1 className="text-xl md:text-2xl lg:text-3xl font-normal leading-relaxed tracking-normal text-gray-900 dark:text-white mb-8">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-normal leading-relaxed tracking-normal text-gray-900 dark:text-white mb-8 max-w-2xl">
             {heroSegments.map((seg, i) => (
               <motion.span
                 key={i}
@@ -93,7 +87,7 @@ export default function HomePage() {
       <Marquee />
 
       {/* ── Selected Work ────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 pt-8 pb-20 max-w-7xl mx-auto">
+      <section className="px-6 md:px-12 pt-12 pb-20 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

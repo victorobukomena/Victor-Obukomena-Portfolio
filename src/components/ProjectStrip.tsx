@@ -24,7 +24,7 @@ function CyclingCard({
   }, [images.length, startDelay])
 
   return (
-    <div className={`relative flex-shrink-0 rounded-2xl overflow-hidden opacity-50 ${className}`}>
+    <div className={`relative flex-shrink-0 rounded-2xl overflow-hidden grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-[filter,opacity] duration-700 ease-out ${className}`}>
       {images.map((img, i) => (
         <div
           key={i}
@@ -40,7 +40,7 @@ function CyclingCard({
 // ── Static card ─────────────────────────────────────────────────
 function StaticCard({ src, alt, className }: { src: string; alt: string; className: string }) {
   return (
-    <div className={`relative flex-shrink-0 rounded-2xl overflow-hidden opacity-50 ${className}`}>
+    <div className={`relative flex-shrink-0 rounded-2xl overflow-hidden grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-[filter,opacity] duration-700 ease-out ${className}`}>
       <Image src={src} alt={alt} fill className="object-cover" sizes="420px" />
     </div>
   )
@@ -62,7 +62,7 @@ const SLOTS: SlotData[] = [
     w: L, h: 'h-[62vh]' },
   { type: 'static',
     src: '/assets/projects/mcfabels-foods/hero2.jpg', alt: 'McFabels Foods',
-    w: P, h: 'h-[80vh]' },
+    w: 'w-[700px]', h: 'h-[80vh]' },
   { type: 'cycling',
     images: [
       { src: '/assets/projects/merit-and-mark/3.jpg', alt: 'Merit & Mark' },
