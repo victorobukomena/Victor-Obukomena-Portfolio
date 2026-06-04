@@ -7,7 +7,10 @@ import ProjectStrip from '@/components/ProjectStrip'
 import WorkCard from '@/components/WorkCard'
 import { projects } from '@/data/projects'
 
-const featured = projects.slice(0, 4)
+const featured = [
+  ...projects.slice(0, 4),
+  projects.find((p) => p.slug === 'video-projects'),
+].filter((p): p is typeof projects[0] => p != null)
 
 const clients = [
   'Aig-Imoukhuede Foundation',
