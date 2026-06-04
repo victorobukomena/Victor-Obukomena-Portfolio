@@ -21,7 +21,9 @@
       "Bash(git add *)",
       "Bash(git commit -m 'Fix JSX namespace type import for production build *)",
       "Bash(git push *)",
-      "Bash(gh pr *)"
+      "Bash(gh pr *)",
+      "Bash(rm \"C:\\\\Users\\\\AIG\\\\Desktop\\\\Victor Obukomena Portfolio\\\\src\\\\app\\\\favicon.ico\")",
+      "Bash(git commit -m 'Remove default favicon.ico so icon.jpg takes effect *)"
     ]
   }
 }
