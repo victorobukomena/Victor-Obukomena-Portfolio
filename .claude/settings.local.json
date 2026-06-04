@@ -23,7 +23,8 @@
       "Bash(git push *)",
       "Bash(gh pr *)",
       "Bash(rm \"C:\\\\Users\\\\AIG\\\\Desktop\\\\Victor Obukomena Portfolio\\\\src\\\\app\\\\favicon.ico\")",
-      "Bash(git commit -m 'Remove default favicon.ico so icon.jpg takes effect *)"
+      "Bash(git commit -m 'Remove default favicon.ico so icon.jpg takes effect *)",
+      "Bash(git commit -m 'Fix favicon: explicit icon metadata + icon in public folder *)"
     ]
   }
 }

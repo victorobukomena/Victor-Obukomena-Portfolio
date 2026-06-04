@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   description:
     'Victor Obukomena is a graphic designer and digital communications specialist based in Lagos, Nigeria. Specialising in branding, motion graphics, and digital strategy.',
   keywords: ['graphic designer', 'digital communications', 'Lagos', 'Nigeria', 'branding', 'motion graphics'],
+  icons: {
+    icon: '/icon.jpg',
+    shortcut: '/icon.jpg',
+    apple: '/icon.jpg',
+  },
   openGraph: {
     title: 'Victor Obukomena',
     description: 'Graphic Designer & Digital Communications Specialist, Lagos Nigeria.',
