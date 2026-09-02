@@ -33,13 +33,40 @@ const contacts = [
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
 
   const set = (field: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [field]: e.target.value }))
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSubmitting(true)
+    setError('')
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          subject: `New message from ${form.name} via portfolio site`,
+          from_name: form.name,
+          ...form,
+        }),
+      })
+
+      const data = await res.json()
+      if (data.success) {
+        setSubmitted(true)
+      } else {
+        setError(data.message || 'Something went wrong. Please try again.')
+      }
+    } catch {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -144,11 +171,16 @@ export default function ContactPage() {
                 />
               </div>
 
+              {error && (
+                <p className="text-red-500 text-sm">{error}</p>
+              )}
+
               <button
                 type="submit"
-                className="bg-[#D4A853] text-black font-semibold px-8 py-3.5 rounded-full text-sm hover:bg-[#C49743] active:bg-[#B58632] transition-colors w-full sm:w-auto"
+                disabled={submitting}
+                className="bg-[#D4A853] text-black font-semibold px-8 py-3.5 rounded-full text-sm hover:bg-[#C49743] active:bg-[#B58632] transition-colors w-full sm:w-auto disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Message
+                {submitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           )}
